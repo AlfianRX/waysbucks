@@ -1,0 +1,36 @@
+.modal-title{
+    color: #BD0707;
+    font-family: 'Mukta', sans-serif;
+    font-size: 40px;
+}
+
+.info-modal .modal-content {
+    border-radius: 15px!important;
+    padding: 30px 20px!important;
+}
+
+.auth-input {
+    margin-bottom: 20px!important;
+    font-weight: 400!important;
+    font-size: 17px!important;
+    padding: 10px!important;
+    width: 100%!important;
+    box-sizing: border-box!important;
+}
+
+.form-auth-button {
+    background-color: #BD0707 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: solid 3px #BD0707 !important;
+    padding: 5px!important;
+    width: 100%!important;
+    border-radius: 5px!important;
+    font-weight: 500!important;
+    font-size: 17px!important;
+    margin-bottom: 20px!important;
+}
+
+span {
+    cursor: pointer;
+}

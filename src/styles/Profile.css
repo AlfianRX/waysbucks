@@ -1,0 +1,36 @@
+.pp {
+    height: 16rem;
+    width: 12rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.drink {
+    height: 8rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+p.profile-text{
+    color: #613D2B;
+    font-size: large;
+    font-weight: 600;
+   
+}
+
+/* card */
+
+.card-container{
+    height: auto;
+    background-color: #F6DADA;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.status{
+    background-color: #cfeef5;
+    color:#00D1FF ;
+    text-align: center;
+    font-size: 13px;
+}

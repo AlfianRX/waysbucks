@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta:wght@800&family=Passion+One:wght@700&display=swap');
+:root{
+  --color-pri : #BD0707;
+  --color-semi-red :#F6DADA;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-color: #FFFBFB;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-red{
+  color: var(--color-pri) !important;
+}
+
+.bg-pink{
+  background-color: var(--color-semi-red);
+}
+
+.btn-red{
+  background-color: var(--color-pri) !important;
+  color: white !important;
+  font-weight: bold !important;
+  border: solid 3px var(--color-pri) !important;
+}
+.btn-reverse-red{
+  color: var(--color-pri) !important;
+  border: solid 3px var(--color-pri) !important;
+  font-weight: bold !important;
+}
+.btn-red:hover{
+  background-color: var(--color-pri) !important;
+  color: white !important;
+  font-weight: bold !important;
+  border: solid 3px var(--color-pri) !important;
+}
+.btn-reverse-red:hover{
+  color: var(--color-pri);
+  border: solid 3px var(--color-pri);
+  font-weight: bold;
+}
+
+.input-red{
+  background-color: rgba(224, 200, 200, 0.25) !important;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: solid 3px var(--color-pri) !important;
+}
+.input-red::placeholder{
+  color:rgba(104, 50, 50, 0.5) !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.nav-photo{
+  width: 50px; 
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-size: cover;
+  border: solid 2.5px var(--color-pri);
+  cursor: pointer;
+}
+
+.nav-photo:hover .menu-drop{
+  display: block;
+}
+
+.menu-drop{
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  right: -5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+  display: none;
+}
+
+.menu-drop p {
+  width: 100%;
+  margin: 0;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menu-drop p:hover{
+  color: var(--color-pri);
+}
+
+.menu-drop div {
+  border-bottom: solid 3px grey;
+  padding-right: 65px !important;
+}
+
+.menu-drop::before{
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 30px solid white;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+}
+
+.bold-red{
+  font-family: 'Mukta', sans-serif;
+}

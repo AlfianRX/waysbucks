@@ -1,0 +1,21 @@
+/* card */
+
+.card-container{
+    height: auto;
+    background-color: #F6DADA;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.status{
+    background-color: #cfeef5;
+    color:#00D1FF ;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* admin-table */
+
+.table-admin{
+    border: #828282
+}

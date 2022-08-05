@@ -1,0 +1,26 @@
+.addImages{
+    position: relative;
+    border-radius: 10px;
+    border: solid 3px #BD0707;
+    color: white;
+    width: 100%;
+    height: 44px;
+    padding: 8px 20px;
+}
+
+.upload{
+    height: 40px;
+    position: absolute;
+    top:0;
+    right: 0;
+    text-align: center;
+    padding: 8px;
+}
+
+.btn-add{
+    width: 100%;
+}
+
+.imgPreview{
+    padding-left: 50px;
+}
