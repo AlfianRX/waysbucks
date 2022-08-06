@@ -9,3 +9,16 @@ img.purchased-drink {
     object-fit: cover;
     border-radius: 1rem;
 }
+
+.pay-modal{
+  color: #469F74;
+  width: 100%;
+  border-radius: 15px!important;
+  padding: 30px 20px!important;
+}
+
+.pay-notif{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}

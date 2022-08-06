@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 
-import {Card, Button, Container, Row, Col, Table} from 'react-bootstrap'
+import {Card, Modal, Table} from 'react-bootstrap'
 import '../styles/AdminPage.css'
+import PurchasedCard from '../components/PurchasedCard';
+import { DummyTable } from '../dummyData/FakeDataProduct';
 
 
 function AdminPage(){
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return(
         <div className='container' style={{marginTop: 100}}>
             <h1 className='text-red bold-red' 
@@ -21,26 +29,30 @@ function AdminPage(){
                     <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                    <td>1</td>
-                    <td>Sugeng No Pants</td>
-                    <td>Cileungsi</td>
-                    <td>16820</td>
-                    <td>69.000</td>
-                    <td>waiting approve</td>
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    <td>Haris Gams</td>
-                    <td>Serang</td>
-                    <td>42111</td>
-                    <td>30.000</td>
-                    <td>Success</td>
-                    </tr>
+                <tbody style={{backgroundColor:'#FFFFFF'}}>
+                    {DummyTable.map((income,index) =>{
+
+                        return(
+                            <tr>
+                            <td>{income.number}</td>
+                            <td>{income.name}</td>
+                            <td>{income.address}</td>
+                            <td>{income.postcode}</td>
+                            <td><a onClick={handleShow}
+                            style={{cursor:'pointer'}}
+                            >{income.income}</a></td>
+                            <td>{income.status}</td>
+                            </tr>
+                            )
+                        }
+                    )}
+                    
                 </tbody>
             </Table>
 
+            <Modal show={show} onHide={handleClose} centered style={{marginTop: 0}}>
+                <PurchasedCard/>
+            </Modal>
         </div>
     );
 }

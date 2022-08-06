@@ -11,7 +11,6 @@ function Profile(){
         <div className='container' style={{marginTop: 100}}>
             <Container>
                 <Row>
-                
                     <Col md={6}>
                     <h2 className="text-red bold-red">My Profile</h2>
                         <Row style={{marginTop: 20}}>
@@ -31,7 +30,9 @@ function Profile(){
                         </Row>
                     </Col>
                     <Col>
-                    <h2 className="text-red bold-red">My Transaction</h2>
+                    <h2 className="text-red bold-red"
+                    style={{marginBottom:20}}
+                    >My Transaction</h2>
                         <PurchasedCard/>
                     </Col>
                 </Row>

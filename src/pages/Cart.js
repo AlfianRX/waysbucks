@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 
-import {Card, Button, Container, Row, Col} from 'react-bootstrap'
+import {Modal, Button, Container, Row, Col} from 'react-bootstrap'
 import PurchasedCard from '../components/PurchasedCard';
 import '../styles/Cart.css'
 import Booba from '../assets/latte.jpg'
 import Del from '../assets/icons/bin-icon.png'
 
 function Cart(){
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     return(
-        <div className='container' style={{marginTop: 100}}>
+        <div className='container' style={{marginTop: 60}}>
             <Container>
                 <Row>
                         <h2 className='text-red'>My Cart</h2>
@@ -46,10 +53,10 @@ function Cart(){
                                 <p className='text-red bold-red'
                                 style={{fontSize:'20px', textAlign:'left'}}
                                 >Ice Coffe Palm Sugar</p>
-                                <p className='text-red'>Topping : Manggo Slice</p>
+                                <p className='text-red'>Topping : Manggo Slice, Manggo</p>
                             </Col>
                             <Col md={4} style={{textAlign:'right'}}>
-                                <p className='text-red'>Rp. 33.000</p>
+                                <p className='text-red'>Rp. 36.000</p>
                                 <img src={Del} alt='delete'/>
                             </Col>
                         </Row>    
@@ -78,10 +85,22 @@ function Cart(){
                                 <p className='text-red bold-red'>Rp. 69.000</p>
                             </Col>
                         </Row>
-                        <Button className='btn-cart btn-red w-100'>Pay</Button>
+                        <Button className='btn-cart btn-red w-100'
+                        onClick={handleShow}
+                        >Pay</Button>
                     </Col>
                 </Row>
             </Container>
+            {/* success payment */}
+
+            <Modal className='pay-modal'
+                show={show} onHide={handleClose} centered>
+                    <Modal.Body>
+                        <p className='pay-notif'>
+                        Thank you for ordering in us, please wait to verify you order
+                        </p>
+                    </Modal.Body>
+            </Modal>
 
         </div>
     );

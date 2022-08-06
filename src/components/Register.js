@@ -4,12 +4,25 @@ import React, { useState } from 'react';
 import { Form, Button, Modal } from "react-bootstrap";
 import '../styles/Auth-modal.css'
 
-function Register({showRegister,handleCloseRegis}) {
+function Register(props) {
+    // register
+  const [show, setShow] = useState(props.isOpen);
+  const handleRegisterClose = () => {
+    setShow(false);
+    props.isClose();
+  };
+
+  // login
+  const handleLoginModal = () => {
+    setShow(false);
+    props.isClose();
+    props.isOpenLogin();
+  };
      
     return (
       <>
         <Modal className='info-modal'
-        show={showRegister} onHide={handleCloseRegis}
+        show={show} onHide={handleRegisterClose}
         centered>
             <Modal.Body>
                 <Modal.Title className='modal-title mb-3'
@@ -55,7 +68,9 @@ function Register({showRegister,handleCloseRegis}) {
                     Register
                 </Button>
             </Form>
-                Already have an account ? Klik Here
+                <span onClick={handleLoginModal} style={{ textDecoration: "none" }}>
+                <p className="form-auth-p">Already have an account? Click Here</p>
+                </span>
             </Modal.Body>
         </Modal>
       </>

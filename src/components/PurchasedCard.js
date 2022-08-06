@@ -7,7 +7,7 @@ import Qrdummy from '../assets/qr_dummy.png';
 
 function PurchasedCard(){
     return(
-        <Container className='card-container position-relative' style={{marginTop: 20}}>
+        <Container className='card-container position-relative'>
                 <Row>
                     <Col>
                     {/* item */}
@@ -39,8 +39,8 @@ function PurchasedCard(){
                                     ><strong style={{fontSize:'20px'}}>
                                     Ice Coffe Palm Sugar</strong>
                                     <br/><strong>Monday</strong>, 8 August 2022
-                                    <br/><br/>Topping : Manggo Slice
-                                    <br/>Rp. 33.000</p>
+                                    <br/><br/>Topping : Manggo Slice, Manggo
+                                    <br/>Rp. 36.000</p>
                                 </Col>
                         </Row>
                     </Col>

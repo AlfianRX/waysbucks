@@ -5,20 +5,25 @@ import { Link } from "react-router-dom";
 import { Form, Button, Modal } from "react-bootstrap";
 import '../styles/Auth-modal.css'
 
-function  Login({showLogin,handleClose}) {
-    // const [showLogin, setShow] = useState(false);
-  
-    // const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
+function Login(props) {
+    // Login
+    const [show, setShow] = useState(props.isOpen);
+    const handleLoginClose = () => {
+        setShow(false);
+        props.isClose();
+    };
+
+    // Register
+    const handleModalRegister = () => {
+        setShow(false);
+        props.isClose();
+        props.isOpenRegister();
+    };    
   
     return (
-      <>
-        {/* <Button variant="primary" onClick={handleShow}>
-          Login
-        </Button> */}
-  
+      <>  
         <Modal className='info-modal'
-        show={showLogin} onHide={handleClose} centered>
+        show={show} onHide={handleLoginClose} centered>
             <Modal.Body>
                 <Modal.Title className='modal-title mb-3'
                 >Login</Modal.Title>
@@ -52,7 +57,11 @@ function  Login({showLogin,handleClose}) {
                     Login
                 </Button>
             </Form>
-                Don't have an account ? Klik Here
+            <span
+            onClick={handleModalRegister}
+            style={{ textDecoration: "none" }}>
+            <p className="form-auth-p">Don't have an account? Click Here</p>
+          </span>
             </Modal.Body>
         </Modal>
       </>

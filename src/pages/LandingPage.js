@@ -5,7 +5,7 @@ import Cards from '../components/LandingCards';
 
 function LandingPage(){
     return(
-        <div className="container" style={{marginTop: 100, marginBottom: 50}}>
+        <div className="container" style={{marginTop: 60, marginBottom: 50}}>
             <div className="hero d-flex align-items-center position-relative"
                 style={{backgroundImage: `url(${Bghome})`,backgroundRepeat: 'no-repeat'}}>
                 <div className="hero-text">
